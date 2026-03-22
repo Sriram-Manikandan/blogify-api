@@ -1,7 +1,7 @@
 const http = require('http');
 // The developer is trying to import the logMessage function
 // using destructuring, assuming an object is returned.
-const { logMessage } = require('./utils/log');
+const { logMessage } = require('./log');
 
 const server = http.createServer((req, res) => {
   // This line will crash the server because logMessage is undefined.
