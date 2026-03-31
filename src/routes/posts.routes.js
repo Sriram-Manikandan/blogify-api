@@ -1,8 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.send('Fetching all blog posts...');
-});
+// import controller
+const postController = require('../controllers/posts.controller');
+
+// use controller
+router.get('/', postController.getAllPosts);
 
 module.exports = router;
